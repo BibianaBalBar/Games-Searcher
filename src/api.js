@@ -34,6 +34,13 @@ console.log(currentDate);
 //Popular games
 const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
 
-export const popularGamesURL = () => `${base_url}${popular_games}`;
+//Upcoming games
+const upcoming_games = `games?dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
 
+//Upcoming games
+const new_games = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
+
+export const popularGamesURL = () => `${base_url}${popular_games}`;
+export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
+export const newGamesURL = () => `${base_url}${new_games}`;
 
