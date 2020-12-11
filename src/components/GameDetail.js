@@ -46,6 +46,20 @@ const GameDetail = ({pathId}) => {
     }
   };
 
+  //GET STARS
+  const getStars = () => {
+    const stars = [];
+    const rating = Math.floor(game.rating);
+    for(let i = 1; i <= 5; i++){
+      if (i <= rating) {
+        stars.push(<img alt="star" key={i} src={starFull} />);
+      } else {
+        stars.push(<img alt="star" key={i} src={starEmpty} />);
+      }      
+    }
+    return stars;
+  };
+
   //data
   const {screen, game, isLoading} = useSelector((state) => state.detail);
   
@@ -58,6 +72,7 @@ const GameDetail = ({pathId}) => {
               <div className="rating">
                 <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                 <p>Rating: {game.rating}</p>
+                {getStars()}
               </div>
               <Info>
                 <h3>Platforms</h3>
@@ -132,6 +147,11 @@ const Stats = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  img {
+    width: 2rem;
+    height: 2rem;
+    display: inline;
+  }
 `;
 
 const Info = styled(motion.div)`
