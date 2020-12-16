@@ -1,3 +1,14 @@
+# Games Searcher
+
+## Games Searcher Webapp created with React
+
+Project build based on [Dev Ed](https://github.com/developedbyed)'s tutorial on "The Creative React Course".
+
+ 
+![games_searcher](https://github.com/BibianaBalBar/Games-Searcher/blob/main/imgs/games_searcher.gif)
+
+    //////////////////////////////////////////////////////////////
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
